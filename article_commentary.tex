@@ -1,0 +1,91 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usepackage{makecell}
+
+\usepackage{graphicx} % Required for inserting images
+
+\title{Deep Learning}
+\subtitle{PEC5 - Estado del Arte}
+\author{Judith Urbina Córdoba}
+\institute{UOC}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\section{Datos básicos del artículo}
+\subsection{Referencia completa}
+\begin{frame}
+    \frametitle{Título y detalles técnicos del artículo}
+    Título: 3D Gaussian Splatting for Real-Time Radiance Field Rendering
+    Autores: \begin{itemize}
+        \item  Bernhard Kerbl (Université Côté d'Azur)
+        \item Georgios Kopanas (Université Côté d'Azur)
+        \item Thomas Leimkühler (Max-Planck-Institut für Informatik)
+        \item George Drettakis (Université Côté d'Azur)
+    \end{itemize}
+    Publicación: 8 Agosto de 2023 en ACM (Association for Computing Machinery), Volumen 42, Número 4, Artículo 1
+\end{frame}
+
+\subsection{Descripción de la temática y novedades}
+\begin{frame}
+    \frametitle{Descripción de la temática y novedades del artículo}
+    Temática: Aplicación del Machine Learning en la Reconstrucción 3D de escenarios mediante NeRF (neural Radiance Field)
+    Novedades:
+   \begin{enumerate}[I]
+        \item Representación con variables Gaussianas 3D diferenciables
+        \item Como input toman puntos SfM
+       \item Usan coeficientes de armónicos esféricos (SH coefficients)
+       \item Se han basado en principios de real-time-rendering
+   \end{enumerate}
+\end{frame}
+
+\section{Parte experimental del artículo}
+\subsection{Resumen de la parte experimental}
+
+\begin{frame}
+\frametitle{Implementación del método}
+La programación se hace con Python (Pytorch), CUDA, SIBR.
+Esquema:
+\begin{table}
+    \begin{tabular}{l| c}
+        Datasets usados &  \makecell{Sintéticos con \textit{Blender}, \\ TanksAndTemples,  \\Conjuntos de Mip-NeRF360}\\
+        \hline
+        Algoritmos comparados & \makecell{Ground Truth, 3D Gaussian Splitting 7-K, \\3D Gaussian Splatting-30k, Mip-NeRF360, \\InstantNGP, Plenoxels}\\
+        \hline
+        Métricas usadas & \makecell{SSIM, PSNR, LPIPS, Tiempo de entrenamiento,\\FPS y Memoria}\\
+        \hline
+        Estudios de Ablación & \makecell{BW Limitado, Random Init, No-Split,\\No-SH, No-Clone, Isotrópico, Entero}
+    \end{tabular}
+    \caption{Parte experimental del estudio}
+\end{table}
+    
+\end{frame}
+
+
+\section{Conclusiones y resumen crítico del artículo}
+\subsection{Conclusiones y resumen crítico}
+\begin{frame}
+\frametitle{Conclusiones y resumen crítico del artículo}
+    \begin{columns}
+    \column{0.5\textwidth}
+    \begin{itemize}
+        \item Velocidad de renderización equiparable a los mejores métodos previos
+        \item Calidad equiparable a los mejores métodos previos
+    \end{itemize}
+    \column{0.5\textwidth}
+    \begin{itemize}
+        \item  En las regiones con mala visualización hay fallas
+        \item Requiere de más memoria que otros métodos
+    \end{itemize}
+ 
+    \end{columns}
+Mezcla lo mejor de los métodos encontrados hasta el momento.\\
+Plantean hacer mesh reconstructions en el futuro con su método.
+\end{frame}
+
+
+\end{document}
