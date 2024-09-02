@@ -2,7 +2,7 @@
 
 Welcome to my repository, where I showcase a variety of works related to data science. This space will be continuously updated with projects ranging from academic coursework to personal experiments, all aimed at deepening my understanding of data science.
 
-## Current Focus: Deep Learning Commentary
+## Last Focus: Deep Learning Commentary
 
 ### Project Overview
 The file `article_commentary.tex` is a LaTeX-based presentation developed for a Master’s course in Deep Learning at the Open University of Catalonia (UOC). It provides a critical review of the article "[3D Gaussian Splatting for Real-Time Radiance Field Rendering](https://arxiv.org/abs/2308.04079)."
