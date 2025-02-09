@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Live Sessions"
+permalink: /live-sessions/
+---
+
 ## Deep Learning Commentary
 
 ### Project Overview
