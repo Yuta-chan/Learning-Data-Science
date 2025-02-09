@@ -10,3 +10,5 @@ nav:
     url: "/"
   - title: "Live Sessions"
     url: "/live-sessions/"
+  - title: "Data Visualization Project"
+    url: "/mini-datavisualization-showcase/"
